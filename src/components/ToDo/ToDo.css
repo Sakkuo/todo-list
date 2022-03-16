@@ -52,32 +52,27 @@
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
     .divTodos {
         min-width: 40%;
         max-width: 40%;
     }
 }
 
-@media (max-width: 510px) {
+@media (max-width: 630px) {
     .divTodos {
         min-width: 50%;
         max-width: 50%;
     }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 510px) {
     .divTodos {
-        min-width: 60%;
-        max-width: 60%;
+        min-width: 95%;
+        max-width: 95%;
     }
 }
-@media (max-width: 360px) {
-    .divTodos {
-        min-width: 70%;
-        max-width: 70%;
-    }
-}
+
 
 .createColumn {
     text-align: center;
