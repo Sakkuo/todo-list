@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {createStore, applyMiddleware} from 'redux'
+import rootReducer from './store/reducers/rootReducer'
+import {Provider} from 'react-redux'
+import reduxThunk from 'redux-thunk'
+
+
+const loggerMiddleware = store => next => action => {
+  const result = next(action)
+  // console.log('Middleware', store.getState())
+  return result
+}
+
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={createStore(rootReducer, applyMiddleware(loggerMiddleware, reduxThunk))}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
+
   document.getElementById('root')
 );
 
