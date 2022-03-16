@@ -68,8 +68,8 @@
 
 @media (max-width: 510px) {
     .divTodos {
-        min-width: 95%;
-        max-width: 95%;
+        min-width: 75%;
+        max-width: 75%;
     }
 }
 
